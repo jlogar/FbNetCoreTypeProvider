@@ -1,0 +1,4 @@
+storage:none
+source https://www.nuget.org/api/v2
+nuget FirebirdSql.Data.FirebirdClient
+nuget SQLProvider
