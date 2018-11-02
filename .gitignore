@@ -1,3 +1,4 @@
+.paket/load
 bin/
 obj/
 paket-files/

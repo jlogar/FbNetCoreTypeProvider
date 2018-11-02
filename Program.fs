@@ -23,9 +23,9 @@ let main argv =
     csb.Role <- ""
     use connection = new FbConnection(csb.ConnectionString)
     connection.Open()
-    let cmd = connection.CreateCommand()
+    use cmd = connection.CreateCommand()
     cmd.CommandText<-"SELECT * FROM test"
-    let reader = cmd.ExecuteReader()
+    use reader = cmd.ExecuteReader()
     printfn "local; HasRows: %A" reader.HasRows
     reader.Read() |> ignore
     let id = reader.GetInt32(0)
